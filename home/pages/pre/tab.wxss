@@ -1,0 +1,201 @@
+/* page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+} */
+
+/*总体主盒子*/
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #939393;
+}
+
+/*左侧栏主盒子*/
+
+.nav_left {
+  /*设置行内块级元素（没使用定位）*/
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  /*主盒子设置背景色为灰色*/
+  background: #f5f5f5;
+  text-align: center;
+}
+
+/*左侧栏list的item*/
+
+.nav_left .nav_left_items {
+  /*每个高30px*/
+  height: 30px;
+  /*垂直居中*/
+  line-height: 30px;
+  /*再设上下padding增加高度，总高42px*/
+  padding: 6px 0;
+  /*只设下边线*/
+  border-bottom: 1px solid #dedede;
+  /*文字14px*/
+  font-size: 14px;
+}
+
+/*左侧栏list的item被选中时*/
+
+.nav_left .nav_left_items.active {
+  /*背景色变成白色*/
+  background: #fff;
+}
+
+/*右侧栏主盒子*/
+
+.nav_right {
+  /*右侧盒子使用了绝对定位*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 75%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/*右侧栏list的item*/
+
+.nav_right .nav_right_items {
+  /*浮动向左*/
+  float: left;
+  /*每个item设置宽度是33.33%*/
+  width: 33.33%;
+  height: 80px;
+  text-align: center;
+}
+
+.nav_right .nav_right_items image {
+  /*被图片设置宽高*/
+  width: 50px;
+  height: 30px;
+}
+
+.nav_right .nav_right_items text {
+  /*给text设成块级元素*/
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  /*设置文字溢出部分为...*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav-tabs {
+  width: 100%;
+  height: 75rpx;
+  display: flex;
+}
+
+.tab-content {
+  flex: 1;
+}
+
+.default {
+  line-height: 75rpx;
+  text-align: center;
+  flex: 1;
+  border-bottom: 1px solid #eee;
+  color: #000;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.active {
+  line-height: 75rpx;
+  text-align: center;
+  color: #fc5558;
+  flex: 1;
+  border-bottom: 1px solid red;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.show {
+  display: block;
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+  flex: 1;
+}
+
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 3px;
+  padding-top: 2px;
+  font-size: 14px;
+  background-color: rgb(78, 162, 100);
+  color: white;
+  overflow: hidden;
+  height: 45px;
+  bottom: 0;
+  position: fixed;
+}
+
+ .wrap{
+  width: 550rpx;
+  margin: 50rpx auto
+}
+ 
+.checkbox-con{
+  margin-top: 40rpx;
+  text-align: center
+}
+.checkbox{
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  color: #888888;
+  border: 1rpx solid #CECECE;
+  border-radius: 5rpx;
+  display: inline-block;
+  margin: 0 10rpx 20rpx 0;
+  position: relative
+}
+.checked{
+  color: #1A92EC;
+  background: rgba(49,165,253,0.08);
+  border: 1rpx solid #31A5FD;
+}
+.checkbox checkbox{
+  display: none
+}
+.checked-img{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 0;
+  right: 0
+} 

@@ -1,0 +1,9 @@
+<view class="box">
+  <view class="tab2">
+    <view class='instruction'>
+      <text>使用你的微信openid登陆小程序</text>
+    </view>
+    <text class="tips passTip">{{userPasswordTip}}</text>
+    <button class="Register" bindtap="oLogin">登陆</button>
+  </view>
+</view>

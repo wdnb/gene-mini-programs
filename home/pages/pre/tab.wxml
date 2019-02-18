@@ -1,0 +1,136 @@
+<!-- <view class="page"> -->
+<!-- <view class="page__bd"> -->
+<!-- <view class="weui-tab"> -->
+<view class="weui-navbar">
+  <block wx:for="{{tabs}}" wx:key="*this">
+    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+      <view class="weui-navbar__title">{{item}}</view>
+    </view>
+  </block>
+  <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+</view>
+<view class="weui-tab__panel">
+  <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+    <!--page one start-->
+    <!-- <view>上传照片</view> -->
+    <view>在线拍摄（只允许在线拍摄）</view>
+    <!--page one end-->
+  </view>
+  <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+    <!--page tow start-->
+
+    <!-- <form> -->
+    <view class="section section_gap">
+    </view>
+    <view class="section">
+      <view class="section__title">姓名</view>
+      <input name="input" data-detail="name" bindinput='detailChange' placeholder="please input here" />
+    </view>
+    <view class="section">
+      <view class="section__title">编号（根据基因自动生成编号,无法手动修改）</view>
+      <input name="input" data-detail="serial" bindinput='detailChange' placeholder="please input here" />
+    </view>
+    <view class="section">
+      <view class="section__title">备注</view>
+      <input name="input" data-detail="remarks" bindinput='detailChange' placeholder="please input here" />
+    </view>
+    <!-- <picker mode="date" fields="day" value="{{date}}" start="2000-01-01" end="2100-12-31" bindchange="getDateTime">
+        <text class='textleft'>出生时间</text>
+        <input type="text" name="date" id="date" placeholder="选择出生日期" disabled='true' value='{{year}}{{line}}{{month}}'></input>
+      </picker> -->
+    <!-- 照片上传（一张照片一只守宫最方便） -->
+    <view class="section section_gap">
+      <view class="section__title">性别</view>
+      <radio-group name="radio-group" data-detail='sex' bindchange='detailChange'>
+        <label>
+          <radio value="unknown" />未知</label>
+        <label>
+          <radio value="male" />公</label>
+        <label>
+          <radio value="female" />母</label>
+      </radio-group>
+    </view>
+    <view>
+      <text>你的id\n</text>
+      <text>{{openid}}\n</text>
+    </view>
+
+    <!--page two end-->
+  </view>
+  <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+    <!--page three start-->
+    <!--主盒子-->
+    <view class="container">
+      <!--左侧栏-->
+      <view class="nav_left">
+        <block wx:for="{{navLeftItems}}" wx:key="id">
+          <!--当前项的id等于item项的id，那个就是当前状态-->
+          <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
+          <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.tree.desc}}</view>
+        </block>
+      </view>
+      <!--右侧栏-->
+      <view class="nav_right">
+        <!--如果有数据，才遍历项-->
+        <view wx:if="{{navRightItems[curIndex].tree.nodes}}">
+
+          <radio-group>
+
+            <!-- <radio-group name="radio-group"> -->
+            <!-- <label> -->
+            <block wx:for="{{navRightItems[curIndex].tree.nodes}}" wx:key="id">
+              <view class="nav_right_items">
+                <!--用view包裹图片组合，如果有图片就用，无图片提供就使用50x30的这个默认图片-->
+                <view>
+                  <block wx:if="{{item.tree.logo}}">
+                    <image src="{{item.tree.logo}}"></image>
+                  </block>
+                  <block wx:else>
+                    <image src="http://temp.im/50x30"></image>
+                  </block>
+                </view>
+                <!-- <view class='wrap'>
+                  <view class='checkbox-con'> -->
+                <!--如果有文字，就用文字；无文字就用其他-->
+                <!-- <view wx:if="{{item.tree.desc}}"> -->
+                <text>{{item.desc}}</text>
+                <!-- </view>
+                <view wx:else>
+                  <text>{{item.tree.desc2}}</text>
+                </view> -->
+
+                <label class="{{item.checked?'checkbox checked':'checkbox'}}" bindtap='radio' data-index="{{index}}">
+                  <checkbox value="{{item.desc2}}" checked="{{item.tree.checked}}" />{{item.desc2}}
+                </label>
+
+              </view>
+            </block>
+            <!-- </label> -->
+            <!-- </radio-group> -->
+          </radio-group>
+
+        </view>
+        <!--如果无数据，则显示数据-->
+        <view wx:else>暂无数据</view>
+      </view>
+    </view>
+
+    <!--page three end-->
+
+
+  </view>
+
+  <!-- </form> -->
+
+  <!-- </view> -->
+  <!-- </view> -->
+  <!-- </view> -->
+
+</view>
+<!-- <view class='content'>
+        <text style="display: block;text-align: center;font-size: 30px;">
+            倒计时：\n{{ticker}}
+        </text>
+    </view> -->
+
+<button class='btn' bindtap='confirm'>提交</button>
