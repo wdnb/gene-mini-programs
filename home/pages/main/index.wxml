@@ -14,26 +14,26 @@
           <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
           <view class="weui-grid__label">注册</view>
         </navigator>
-        <navigator hidden='{{reged}}' url="../pre/tab" class="weui-grid" hover-class="weui-grid_active">
+        <navigator hidden='{{reged}}' url="../add/add" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
           <view class="weui-grid__label">添加新守宫</view>
         </navigator>
-        <navigator hidden='{{reged}}' url="./" class="weui-grid" hover-class="weui-grid_active">
+        <!-- <navigator hidden='{{reged}}' url="./" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
           <view class="weui-grid__label">添加提醒事项（饮食偏好，状态（蜕皮，挑食，疾病，发情->临产，），值得注意的基因特性）</view>
-        </navigator>
-        <navigator hidden='{{reged}}' url="../qr/qrscan" class="weui-grid" hover-class="weui-grid_active">
+        </navigator> -->
+        <navigator hidden='{{reged}}' url="../manage/list" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
           <view class="weui-grid__label">基因库管理（通过添加gecko自动生成）</view>
         </navigator>
-        <navigator hidden='{{reged}}' url="./index" class="weui-grid" hover-class="weui-grid_active">
+        <!-- <navigator hidden='{{reged}}' url="./index" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
           <view class="weui-grid__label">孵化管理（预产期提醒，温湿度记录）</view>
-        </navigator>
-        <navigator hidden='{{reged}}' url="./index" class="weui-grid" hover-class="weui-grid_active">
+        </navigator> -->
+        <!-- <navigator hidden='{{reged}}' url="./index" class="weui-grid" hover-class="weui-grid_active">
           <image class="weui-grid__icon" src="../../images/icon_tabbar.png" />
           <view class="weui-grid__label">1</view>
-        </navigator>
+        </navigator> -->
       </block>
     </view>
   </view>

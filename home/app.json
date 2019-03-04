@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/route/route",
-    "pages/pre/tab",
+    "pages/add/add",
     "pages/usr/login", 
     "pages/main/index",
     "pages/usr/reg",
     "pages/qr/qrscan",
-    "pages/qr/qrcreate"
+    "pages/qr/qrcreate",
+    "pages/manage/list",
+    "pages/manage/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

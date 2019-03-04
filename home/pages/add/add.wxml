@@ -27,8 +27,8 @@
       <input name="input" data-detail="name" bindinput='detailChange' placeholder="please input here" />
     </view>
     <view class="section">
-      <view class="section__title">编号（根据基因自动生成编号,无法手动修改）</view>
-      <input name="input" data-detail="serial" bindinput='detailChange' placeholder="please input here" />
+      <view class="section__title">组名</view>
+      <input name="input" data-detail="group" bindinput='detailChange' placeholder="please input here" />
     </view>
     <view class="section">
       <view class="section__title">备注</view>
@@ -43,17 +43,17 @@
       <view class="section__title">性别</view>
       <radio-group name="radio-group" data-detail='sex' bindchange='detailChange'>
         <label>
-          <radio value="unknown" />未知</label>
+          <radio value="unknown" checked='true' />未知</label>
         <label>
           <radio value="male" />公</label>
         <label>
           <radio value="female" />母</label>
       </radio-group>
     </view>
-    <view>
+    <!-- <view>
       <text>你的id\n</text>
       <text>{{openid}}\n</text>
-    </view>
+    </view> -->
 
     <!--page two end-->
   </view>

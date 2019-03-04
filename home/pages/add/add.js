@@ -17,17 +17,6 @@ Page({
 
     form: {},
     gene: {},
-
-    // checkboxArr: [{
-    //   name: '选项A',
-    //   checked: false
-    // }, {
-    //   name: '选项B',
-    //   checked: false
-    // }, {
-    //   name: '选项F',
-    //   checked: false
-    // }],
   },
 
   radio: function (e) {
@@ -62,8 +51,8 @@ Page({
       case 'name':
         tmp['name'] = e.detail.value
         break;
-      case 'serial':
-        tmp['serial'] = e.detail.value
+      case 'group':
+        tmp['group'] = e.detail.value
         break;
       case 'remarks':
         tmp['remarks'] = e.detail.value
